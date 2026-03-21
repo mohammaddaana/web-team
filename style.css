@@ -1,0 +1,1026 @@
+/* ================= GLOBAL ================= */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #050816;
+    color: white;
+}
+
+html{
+   scroll-behavior: smooth ;
+}
+
+/* ================= NAVBAR CAPSULE ================= */
+
+.main {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* الكبسولة نفسها */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    padding: 14px 35px;
+
+    border-radius: 50px;
+
+    background: rgba(0, 180, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(0, 229, 255, 0.25);
+
+    box-shadow: 
+        0 0 25px rgba(0, 229, 255, 0.12),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+
+/* Menu */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Hover */
+
+nav ul li a:hover {
+    color: #00e5ff;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #00e5ff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a.active {
+    color: #00e5ff;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 10px 18px;   /* كان 14px 35px */
+        gap: 20px;            /* كان 40px */
+        border-radius: 30px;  /* أخف شوي */
+    }
+
+    nav ul {
+        gap: 15px;            /* كان 28px */
+    }
+
+    nav ul li a {
+        font-size: 11px;      /* كان 13px */
+    }
+}
+
+/* ================= SECTIONS ================= */
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #00111f,
+        #002b45,
+        #003b5c,
+        #00111f
+    );
+
+    background-size: 400% 400%;
+
+    animation: oceanMove 12s ease infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     position: relative;
+    overflow: hidden;
+}
+
+.hero-lottie {
+    width: 220px;
+    margin: 0 auto 25px auto;
+    display: block;
+
+    filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.35));
+}
+
+
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(0, 229, 255, 0.15),
+        transparent 60%
+    );
+
+    opacity: 0.6;
+}
+
+@keyframes oceanMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* المحتوى */
+
+.hero-content {
+    max-width: 600px;
+}
+
+/* اللوغو */
+
+.hero-logo {
+    width: 200px;
+    margin-bottom: 0px;
+
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.35));
+}
+
+/* العنوان */
+
+.hero h1 {
+    font-size: 75px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+    margin-top: 0;
+
+    background: linear-gradient(45deg, #00e5ff, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* النص */
+
+.hero p {
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
+
+section, footer {
+    min-height: 100vh;
+    padding: 140px 60px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Workshops */
+
+#workshops-projects {
+  background: linear-gradient(
+        135deg,
+        #00111f,
+        #002a44,
+        #001a2e
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+/* ================= WORKS CONTAINER ================= */
+
+.works-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 60px;
+
+    flex-wrap: wrap;
+}
+
+/* ================= CARD ================= */
+
+.work-card {
+    background: rgba(0, 180, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    width: 320px;
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.05);
+
+    /* Animation State */
+    opacity: 0;
+    transform: translateY(-50px);
+
+   transition: 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.work-card img {
+    width: 100%;
+    height: 220px;      /* ارتفاع ثابت لكل الصور */
+    object-fit: cover;  /* أهم سطر */
+    display: block;
+}
+
+.work-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effect 🔥 */
+
+.work-card:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    border-color: rgba(0, 229, 255, 0.35);
+
+    box-shadow:
+        0 0 25px rgba(0, 229, 255, 0.12);
+}
+
+/* النص */
+
+.section-title {
+    opacity: 0;
+    transform: translateX(60px);
+
+transition: 1.6s cubic-bezier(0.16, 1, 0.3, 1);}
+
+.section-title.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* الكروت */
+
+.work-card {
+    opacity: 0;
+    transform: translateY(-50px);
+
+    transition: 0.8s ease;
+}
+
+.work-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= IMAGE ================= */
+
+.work-card img {
+    width: 100%;
+    height: 250px;      /* خليه ثابت */
+    object-fit:cover;  /* أهم سطر */
+    object-position: top; /* يركز القص بالنص */
+    display: block;
+        filter: brightness(0.85);
+
+}
+
+
+/* ================= CONTENT ================= */
+
+.work-content {
+    padding: 18px;
+}
+
+.work-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+
+    color: #00e5ff;
+}
+
+.work-content p {
+    font-size: 13px;
+    opacity: 0.65;
+    line-height: 1.6;
+}
+/* About */
+
+#about-section {
+
+    background: linear-gradient(
+        135deg,
+        #001a2e,
+        #002f4f,
+        #001f38
+    );
+
+}
+
+
+
+.about-gallery {
+    margin-top: 50px;
+
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.about-gallery img {
+    width: 200px;
+    height: 140px;
+
+    object-fit: cover;
+    border-radius: 16px;
+
+    transition: 0.4s ease;
+    cursor: pointer;
+
+    opacity: 0.8;
+}
+
+.about-gallery img:hover {
+    transform: translateY(-10px) scale(1.05);
+
+    opacity: 1;
+
+    box-shadow:
+        0 15px 30px rgba(0, 229, 255, 0.2);
+}
+
+/* Team */
+
+#team-section {
+    background: linear-gradient(
+        135deg,
+        #001f38,
+        #003b63,
+        #002544
+    );
+}
+
+/* Footer */
+
+#contact-section {
+    background: linear-gradient(
+        135deg,
+        #002544,
+        #00111f
+    );
+}
+
+/* ================= TEXT ================= */
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+/* ================= BUTTON ================= */
+
+button {
+    width: fit-content;
+    padding: 12px 28px;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+/* ================= FOOTER CINEMATIC ================= */
+
+#contact-section {
+    position: relative;
+
+    background: radial-gradient(
+        circle at top,
+        rgba(0, 229, 255, 0.08),
+        #020617 40%,
+        #000000 85%
+    );
+
+    padding: 90px 60px 35px 60px;
+
+    overflow: hidden;
+}
+
+/* Glow Line */
+
+#contact-section::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -50%;
+
+    width: 200%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 229, 255, 0.7),
+        transparent
+    );
+
+    animation: glowLine 6s linear infinite;
+}
+
+@keyframes glowLine {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+}
+
+.footer-container {
+    backdrop-filter: blur(6px);
+}
+
+/* ================= CONTAINER ================= */
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    flex-wrap: wrap;
+}
+
+/* ================= TEXT ================= */
+
+.footer-brand h1 {
+    font-size: 60;
+    letter-spacing: 2px;
+    color: #00e5ff;
+}
+.footer-brand samp {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #00e5ff;
+}
+
+.footer-brand p {
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+
+.footer-social h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-contact p {
+    font-size: 13px;
+    opacity: 0.6;
+    margin-bottom: 6px;
+}
+
+.footer-contact span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ================= SOCIAL ================= */
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(0, 180, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(0, 229, 255, 0.35);
+
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.18);
+
+    color: #00e5ff;
+}
+
+/* ================= BOTTOM ================= */
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    opacity: 0.45;
+
+
+}
+.footer-bottom-1 {
+    margin-top: auto; 
+    padding: 13px;
+   border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+}
+
+
+/* ================= COURSES PAGE ================= */
+
+.courses-page {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+
+    background: linear-gradient(
+        180deg,
+        #02121c,
+        #032a3a,
+        #053f57
+    );
+
+    color: white;
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+.sub-page-header {
+    text-align: center;
+    padding: 100px 20px 50px;
+}
+
+.sub-page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.sub-page-header p {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+/* ================= CONTAINER ================= */
+
+.courses-container {
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+   justify-content: center;
+
+    gap: 30px;
+    padding: 40px 80px 80px;
+}
+
+/* ================= COURSE CARD ================= */
+
+.course-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    transition: 0.6s ease;
+    border: 1px solid rgba(0, 229, 255, 0.15);
+
+    height: auto;
+}
+
+/* Hover Effect */
+
+.course-card:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+        0 0 25px rgba(0, 229, 255, 0.15);
+}
+
+/* ================= IMAGE ================= */
+
+.course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* ================= CONTENT ================= */
+
+.course-content {
+    padding: 20px;
+}
+
+.course-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.course-content p {
+    opacity: 0.6;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ================= BUTTON ================= */
+
+.course-content button {
+    margin-top: 15px;
+    width: 100%;
+
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border: none;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    color: white;
+    cursor: pointer;
+
+    transition: 0.4s ease;
+}
+
+/* Button Hover */
+
+.course-content button:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 15px rgba(0, 198, 255, 0.35);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .courses-container {
+        padding: 30px 20px 60px;
+    }
+
+    .sub-page-header h1 {
+        font-size: 32px;
+    }
+}
+   
+
+
+
+
+
+/* ================= mohammad dana ================= */
+/* ================= mohammad dana ================= */
+/* ================= mohammad dana ================= */
+/* ================= mohammad dana ================= */
+
+
+.cards-container .work-card {
+  position: relative;
+  width: 320px;       /* حجم البطاقة */
+  cursor: pointer;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.cards-container .work-card img {
+  width: 100%;
+  height: 250px;      /* ارتفاع الصورة */
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  display: block;
+}
+
+/* محتوى البطاقة الأساسي */
+.cards-container .work-content {
+  padding: 18px;
+  transition: opacity 0.5s ease;
+}
+
+/* overlay */
+.cards-container .card-hover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Hover Effect */
+.cards-container .work-card:hover .work-content {
+  opacity: 0; /* يخفي المحتوى الأساسي */
+}
+
+.cards-container .work-card:hover .card-hover {
+  opacity: 1; /* يظهر overlay */
+}
+
+@media (max-width: 768px) {
+  .cards-container .work-card {
+    margin: 0 auto; /* تأكيد إضافي للتوسيط */
+    width: 90%;    /* اختيار عرض مناسب ليكون هناك هوامش بسيطة */
+    max-width: 320px; /* لا تزيد عن الحجم الأصلي */
+  }
+}
+
+
+/* ================= mohammad dana ================= */
+/* ================= mohammad dana ================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.youtube-section {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 500px; /* يمكنك تعديل الارتفاع */
+}
+/* منطقة الفيديو تأخذ مساحة أكبر */
+.video-display {
+    flex: 3;
+}
+.video-display iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+
+
+/* قائمة الفيديوهات */
+.video-playlist {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.video-playlist h3 {
+    padding: 15px;
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.playlist-items {
+    overflow-y: auto; /* لإضافة سكرول بار إذا زادت الفيديوهات */
+}
+.item {
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+    font-size: 14px;
+}
+.item:hover, .item.active {
+    background: rgba(0, 210, 255, 0.1);
+    color: #00d2ff;
+}
+.playlist-items {
+    direction: rtl;
+}
+.playlist-items > * {
+    direction: ltr;
+}
+/* Scrollbar */
+.playlist-items::-webkit-scrollbar {
+    width: 6px;
+}
+.playlist-items::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+.playlist-items::-webkit-scrollbar-thumb {
+    background: #00d2ff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
+}
+.playlist-items::-webkit-scrollbar-thumb:hover {
+    background: #008fb3;
+}
+
+/* --- إعدادات الديسكتوب الافتراضية --- */
+.youtube-section {
+    display: flex;
+    flex-direction: row-reverse; /* لضمان القائمة على اليمين */
+    gap: 20px;
+    padding: 20px;
+}
+
+.mobile-menu-btn {
+    display: none; /* مخفي في الديسكتوب */
+}
+@media (max-width: 768px) {
+    /* 1. إلغاء الارتفاع الثابت للقسم الرئيسي */
+    .youtube-section {
+        flex-direction: column; /* جعل الفيديو والقائمة فوق بعض */
+        height: auto; 
+        padding: 10px;
+        margin-top: 60px; /* مسافة عشان زر المنيو ما يغطي الفيديو */
+    }
+
+    /* 2. ضبط منطقة الفيديو */
+    .video-display {
+        width: 100%;
+        flex: none; /* إلغاء الفليكس القديم */
+        /* تحديد نسبة العرض للارتفاع 16:9 */
+        aspect-ratio: 16 / 9; 
+    }
+
+    /* 3. التأكد من أن iframe يملأ الحاوية تماماً */
+    .video-display iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+/*#####################################################################*/
+
+
+/* --- إعدادات الديسكتوب (القائمة على اليسار) --- */
+.youtube-section {
+    display: flex;
+    flex-direction: row; /* الترتيب الطبيعي: القائمة أولاً (يسار) ثم الفيديو (يمين) */
+    gap: 20px;
+    padding: 20px;
+}
+.close-menu {
+    display: none;
+}
+/* --- إعدادات الجوال (شاشات أصغر من 768px) --- */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        padding: 10px 18px;
+        gap: 20px;
+        border-radius: 30px;
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px; /* نقل الزر الأزرق لليسار أيضاً ليتناسق التصميم */
+        right: auto; /* إلغاء التموضع القديم */ 
+        z-index: 2000; /* بقية تنسيقات الألوان كما هي عندك */
+        /* ... كود التنسيق الحالي الخاص بك ... */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        box-shadow: 0 0 25px rgba(0, 229, 255, 0.12), inset 0 0 10px rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(0, 229, 255, 0.25);
+
+    }
+    .hidden {
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none; /* لمنع الضغط عليه وهو مخفي */
+     }
+.video-playlist {
+        position: fixed;
+        top: 0;
+        left: -100%; /* مخفية خارج الشاشة جهة اليسار */
+        right: auto;
+        width: 280px;
+        height: 100%;
+        
+        /* --- التعديل هنا: إضافة التدرج اللوني الذي اخترته --- */
+        background: linear-gradient(180deg, #02121c, #032a3a, #053f57);
+        
+        z-index: 1500;
+        transition: 0.4s ease-in-out;
+        
+        /* التوهج الأزرق سيبدو أجمل الآن مع هذه الخلفية الغامقة */
+        box-shadow: 0 0 25px rgba(0, 229, 255, 0.12), inset 0 0 10px rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(0, 229, 255, 0.25);
+    }
+    /* ظهور القائمة من اليسار */
+    .video-playlist.show {
+        left: 0;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 20px; /* زر الإغلاق أسفل يسار القائمة */
+        right: auto;
+        cursor: pointer;
+        color: #00d2ff;
+        z-index: 1600;
+        font-size: 2.5rem;
+    }
+
+
+    
+
+
+}

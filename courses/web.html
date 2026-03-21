@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kraken</title>
+    <link rel="icon" type="image/png" href="../Images/Personal/k.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+<body class="courses-page">
+    <header class="main">
+      <nav>
+        <ul>
+          <li><a href="../Index.html">Home</a></li>
+          <li><a href="../Courses.html">Courses</a></li>
+        </ul>
+      </nav>
+    </header>
+    <header class="sub-page-header">
+        <h1>Kraken Courses</h1>
+        <p>Web programming with <u>Abdullah Radi</u></p>
+    </header>
+<button class="mobile-menu-btn" onclick="togglePlaylist()"><i class="fas fa-bars"></i></button>
+
+<div class="youtube-section">
+
+<div class="video-playlist"id="playlist-container">
+    <h3>Course Playlist </h3>
+    <div class="playlist-items">
+        <div class="item active" onclick="changeVideo('DCLTvOQaCVU')">Introduction HTML</div>
+        <div class="item " onclick="changeVideo('t5cV70YXVow')">Introduction Css</div>
+
+
+    </div>
+           <span class="close-menu" onclick="togglePlaylist()">&times;</span>
+
+</div>
+    <div class="video-display">
+        <iframe id="main-video" src="https://www.youtube.com/embed/DCLTvOQaCVU" 
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
+</div>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
