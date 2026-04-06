@@ -12,6 +12,12 @@
       "department": "ذكاء",
       "image": "/Images/uploads/page1.jpg",
       "instagram": "https://www.youtube.com/watch?v=kXxrWPbn8RM"
+    },
+    {
+      "name": "احمد",
+      "role": "ليدر",
+      "image": "/Images/uploads/1.png",
+      "department": "."
     }
   ]
 }
