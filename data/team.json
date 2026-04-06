@@ -1,3 +1,10 @@
 {
-  "members": []
+  "members": [
+    {
+      "name": "محمد",
+      "role": "ai",
+      "department": "ai",
+      "image": "/Images/uploads/page1.jpg"
+    }
+  ]
 }
