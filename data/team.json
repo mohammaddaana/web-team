@@ -5,6 +5,13 @@
       "role": "زعيم",
       "department": "الذكاء",
       "image": "/Images/uploads/page1.jpg"
+    },
+    {
+      "name": "محمد",
+      "role": "دعنا",
+      "department": "ذكاء",
+      "image": "/Images/uploads/kraken.jpg",
+      "instagram": "https://www.youtube.com/watch?v=kXxrWPbn8RM"
     }
   ]
 }
