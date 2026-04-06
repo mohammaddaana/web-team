@@ -2,7 +2,8 @@
   "videos": [
     {
       "title": "الفيد الاول ",
-      "link": "https://www.youtube.com/watch?v=kXxrWPbn8RM"
+      "link": "https://www.youtube.com/watch?v=kXxrWPbn8RM",
+      "cover": "/Images/uploads/page1.jpg"
     },
     {
       "title": "بطيخ",
