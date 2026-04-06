@@ -1,14 +1,12 @@
+// ================= NAV SCROLL =================
 const sections = document.querySelectorAll("section, footer");
 const navLinks = document.querySelectorAll("nav ul li a");
 
 window.addEventListener("scroll", () => {
-
     let currentSection = "";
 
     sections.forEach(section => {
-
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
 
         if (window.scrollY >= sectionTop - 200) {
             currentSection = section.getAttribute("id");
@@ -16,7 +14,6 @@ window.addEventListener("scroll", () => {
     });
 
     navLinks.forEach(link => {
-
         link.classList.remove("active");
 
         if (link.getAttribute("href") === `#${currentSection}`) {
@@ -25,109 +22,105 @@ window.addEventListener("scroll", () => {
     });
 });
 
-const overlay = document.querySelector(".hero-overlay");
-
-window.addEventListener("scroll", () => {
-
-    let darkness = window.scrollY / window.innerHeight;
-
-    if (darkness > 1) darkness = 1;
-
-    overlay.style.background = `rgba(0, 0, 0, ${0.2 + darkness * 0.6})`;
-});
-
-const animatedElements = document.querySelectorAll(
-    ".section-title, .work-card"
-);
+// ================= ANIMATION =================
+const animatedElements = document.querySelectorAll(".section-title, .work-card");
 
 const observer = new IntersectionObserver((entries) => {
-
     entries.forEach(entry => {
-
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
         }
-
     });
-
 }, {
     threshold: 0.15
 });
 
 animatedElements.forEach(el => observer.observe(el));
 
-animatedElements.forEach(el => observer.observe(el));
-
-
-
-
-
-//mohammad dana
-//mohammad dana
-//mohammad dana
-//mohammad dana
-//mohammad dana
-
-
-
-function changeVideo(videoId) {
-
-    document.getElementById('main-video').src = "https://www.youtube.com/embed/" + videoId;
-    
-    const items = document.querySelectorAll('.item');
-    items.forEach(item => item.classList.remove('active'));
-    event.currentTarget.classList.add('active');
-}
-// 1. دالة تغيير الفيديو وإغلاق القائمة فوراً
-function changeVideo(videoId, element, event) {
-    // منع انتقال الضغطة لأي عناصر أخرى (مهم جداً)
-    if (event) event.stopPropagation();
-
-    // تغيير مصدر الفيديو
-    const mainVideo = document.getElementById('main-video');
-    mainVideo.src = "https://www.youtube.com/embed/" + videoId;
-    
-    // تحديث العنصر النشط
-    document.querySelectorAll('.item').forEach(item => item.classList.remove('active'));
-    element.classList.add('active');
-
-    // إغلاق القائمة بشكل صريح وحازم
-    const playlist = document.getElementById('playlist-container');
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-
-    playlist.classList.remove('show');
-    menuBtn.classList.remove('hidden');
-    
-    console.log("تم تغيير الفيديو وإغلاق القائمة"); // للتأكد في الـ Console
-}
-
-// 2. دالة فتح/إغلاق القائمة عبر الزر
-function togglePlaylist(event) {
-    if (event) event.stopPropagation();
-    const playlist = document.getElementById('playlist-container');
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    
-    playlist.classList.toggle('show');
-
-    if (playlist.classList.contains('show')) {
-        menuBtn.classList.add('hidden');
-    } else {
-        menuBtn.classList.remove('hidden');
-    }
-}
-
-// 3. إغلاق القائمة عند النقر في أي مكان فارغ (باستثناء القائمة والزر)
-document.addEventListener('click', function(event) {
-    const playlist = document.getElementById('playlist-container');
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-
-    if (playlist.classList.contains('show') && 
-        !playlist.contains(event.target) && 
-        !menuBtn.contains(event.target)) {
-        
-        playlist.classList.remove('show');
-        menuBtn.classList.remove('hidden');
-    }
+// ================= COURSE SYSTEM =================
+document.addEventListener("DOMContentLoaded", () => {
+    loadCourseVideos();
 });
 
+async function loadCourseVideos() {
+    const playlist = document.getElementById("playlistItems");
+    const mainVideo = document.getElementById("main-video");
 
+    if (!playlist || !mainVideo) return;
+
+    try {
+        const file = playlist.dataset.file;
+
+        const res = await fetch(file);
+        const data = await res.json();
+
+        playlist.innerHTML = "";
+
+        data.videos.forEach((video, index) => {
+            const item = document.createElement("div");
+            item.className = "item";
+            item.textContent = video.title;
+
+            item.onclick = function (event) {
+                changeVideo(video.link, item, event);
+            };
+
+            if (index === 0) {
+                item.classList.add("active");
+                mainVideo.src = video.link;
+            }
+
+            playlist.appendChild(item);
+        });
+
+    } catch (err) {
+        console.error("Error:", err);
+    }
+}
+
+// ================= CHANGE VIDEO =================
+function changeVideo(link, element, event) {
+    if (event) event.stopPropagation();
+
+    const mainVideo = document.getElementById("main-video");
+    mainVideo.src = link;
+
+    document.querySelectorAll(".item").forEach(i => i.classList.remove("active"));
+    element.classList.add("active");
+
+    const playlist = document.getElementById("playlist-container");
+    const btn = document.querySelector(".mobile-menu-btn");
+
+    playlist.classList.remove("show");
+    btn.classList.remove("hidden");
+}
+
+// ================= MENU =================
+function togglePlaylist(event) {
+    if (event) event.stopPropagation();
+
+    const playlist = document.getElementById("playlist-container");
+    const btn = document.querySelector(".mobile-menu-btn");
+
+    playlist.classList.toggle("show");
+
+    if (playlist.classList.contains("show")) {
+        btn.classList.add("hidden");
+    } else {
+        btn.classList.remove("hidden");
+    }
+}
+
+document.addEventListener("click", function (e) {
+    const playlist = document.getElementById("playlist-container");
+    const btn = document.querySelector(".mobile-menu-btn");
+
+    if (
+        playlist.classList.contains("show") &&
+        !playlist.contains(e.target) &&
+        !btn.contains(e.target)
+    ) {
+        playlist.classList.remove("show");
+        btn.classList.remove("hidden");
+    }
+});
