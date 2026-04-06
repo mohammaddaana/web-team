@@ -20,6 +20,50 @@ collections:
               - { label: "Video Name", name: "title", widget: "string" }
               - { label: "Video Link", name: "link", widget: "string" }
 
+      - label: "Design Course"
+        name: "design"
+        file: "data/design.json"
+        fields:
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields:
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
+
+      - label: "How Course"
+        name: "how"
+        file: "data/how.json"
+        fields:
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields:
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
+
+      - label: "Pattern Course"
+        name: "pattern"
+        file: "data/pattern.json"
+        fields:
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields:
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
+
+      - label: "Web Course"
+        name: "web"
+        file: "data/web.json"
+        fields:
+          - label: "Videos"
+            name: "videos"
+            widget: "list"
+            fields:
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
+
       - label: "WordPress Course"
         name: "wordpress"
         file: "data/wordpress.json"
