@@ -1,0 +1,403 @@
+/* ================= WORDPRESS COURSE PAGE ================= */
+
+.chapter-section {
+    display: flex;
+    gap: 20px;
+    padding: 30px 40px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* ================= PLAYLIST ================= */
+
+.chapter-playlist {
+    width: 300px;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.06);
+}
+
+.chapter-playlist h3 {
+    padding: 18px;
+    margin: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.playlist-items {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.playlist-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.playlist-items::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.playlist-items::-webkit-scrollbar-thumb {
+    background: #00d2ff;
+    border-radius: 10px;
+}
+
+.item {
+    padding: 16px 18px;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.item:hover,
+.item.active {
+    background: rgba(0, 210, 255, 0.12);
+    color: #00d2ff;
+}
+
+/* ================= VIEWER ================= */
+
+.chapter-display {
+    flex: 1;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    border: 1px solid rgba(0, 229, 255, 0.18);
+    padding: 22px;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.06);
+}
+
+.chapter-viewer-wrapper {
+    position: relative;
+}
+
+.chapter-viewer {
+    width: 100%;
+    min-height: 620px;
+    background: rgba(0, 0, 0, 0.22);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 229, 255, 0.12);
+    overflow: hidden;
+    padding: 14px;
+}
+
+.chapter-viewer iframe {
+    width: 100%;
+    height: 590px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.chapter-video {
+    width: 100%;
+    height: 590px;
+    border-radius: 12px;
+    background: #000;
+    display: block;
+}
+
+.chapter-actions-bottom {
+    margin-top: 16px;
+    display: flex;
+ justify-content: center;}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    transition: 0.3s ease;
+    border: none;
+    white-space: nowrap;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(0, 198, 255, 0.35);
+}
+
+/* ================= FULLSCREEN BUTTON ================= */
+
+.fullscreen-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 20;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.fullscreen-btn:hover {
+    background: rgba(0, 210, 255, 0.18);
+    color: #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.25);
+}
+
+.chapter-viewer:fullscreen {
+    padding: 0;
+    border-radius: 0;
+    background: #111;
+}
+
+.chapter-viewer:fullscreen iframe {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+}
+
+.chapter-viewer:-webkit-full-screen {
+    padding: 0;
+    border-radius: 0;
+    background: #111;
+}
+
+.chapter-viewer:-webkit-full-screen iframe {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+}
+
+/* ================= IMAGE SLIDER ================= */
+
+.image-slider-fixed {
+    width: 100%;
+    min-height: 590px;
+    display: grid;
+    grid-template-rows: 110px 1fr 40px;
+    gap: 14px;
+}
+
+.image-top-content {
+    width: 100%;
+    text-align: center;
+    direction: rtl;
+    unicode-bidi: plaintext;
+    padding: 8px 60px 0;
+}
+
+.image-top-content h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ffffff;
+    font-weight: 700;
+    min-height: 38px;
+}
+
+.image-top-content p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.85);
+    min-height: 52px;
+}
+
+.image-display-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-slide {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+    display: block;
+    background: #fff;
+    border: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+/* الأسهم بدون دوائر */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    padding: 6px 10px;
+}
+
+.slider-btn:hover {
+    color: #00d2ff;
+    transform: translateY(-50%) scale(1.12);
+    text-shadow: 0 0 14px rgba(0, 210, 255, 0.45);
+}
+
+.slider-btn.prev {
+    left: 6px;
+}
+
+.slider-btn.next {
+    right: 6px;
+}
+
+.slider-counter {
+    align-self: center;
+    justify-self: center;
+    background: rgba(3, 35, 50, 0.78);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    border: 1px solid rgba(0, 229, 255, 0.14);
+    backdrop-filter: blur(6px);
+}
+
+.empty-message {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    padding: 30px;
+}
+
+/* ================= MOBILE ================= */
+
+.mobile-menu-btn {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .chapter-section {
+        flex-direction: column;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .chapter-display {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .chapter-viewer {
+        min-height: auto;
+    }
+
+    .chapter-viewer iframe,
+    .chapter-video {
+        height: 420px;
+    }
+
+    .image-slider-fixed {
+        min-height: auto;
+        grid-template-rows: auto 1fr 40px;
+    }
+
+    .image-top-content {
+        padding: 0 24px;
+    }
+
+    .image-top-content h3 {
+        font-size: 18px;
+        min-height: auto;
+    }
+
+    .image-top-content p {
+        font-size: 14px;
+        min-height: auto;
+    }
+
+    .image-display-area {
+        min-height: 260px;
+    }
+
+    .chapter-actions-bottom {
+        justify-content: center;
+    }
+
+    .download-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        position: fixed;
+        top: 18px;
+        left: 18px;
+        z-index: 2000;
+        padding: 10px 16px;
+        border-radius: 30px;
+        background: rgba(0, 180, 255, 0.08);
+        border: 1px solid rgba(0, 229, 255, 0.25);
+        color: #fff;
+        box-shadow: 0 0 25px rgba(0, 229, 255, 0.12),
+                    inset 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-menu-btn.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .chapter-playlist {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        min-width: 280px;
+        height: 100%;
+        z-index: 1500;
+        transition: 0.4s ease-in-out;
+        border-radius: 0;
+        background: linear-gradient(180deg, #02121c, #032a3a, #053f57);
+    }
+
+    .chapter-playlist.show {
+        left: 0;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        cursor: pointer;
+        color: #00d2ff;
+        font-size: 2.4rem;
+    }
+}
+
