@@ -183,3 +183,57 @@ async function loadTeamMembers() {
         console.error("Error loading team members:", error);
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    loadPlaylist();
+});
+
+async function loadPlaylist() {
+    const container = document.getElementById("playlistItems");
+    if (!container) return;
+
+    const file = container.dataset.file;
+
+    try {
+        const res = await fetch(file);
+        const data = await res.json();
+
+        const videos = data.videos || [];
+
+        if (videos.length === 0) {
+            container.innerHTML = "<p style='color:white'>No videos</p>";
+            return;
+        }
+
+        videos.forEach((video, index) => {
+
+            // تحويل الرابط
+            let link = video.link;
+            if (link.includes("watch?v=")) {
+                link = link.replace("watch?v=", "embed/");
+            }
+
+            const item = document.createElement("div");
+            item.className = "item";
+            item.textContent = video.title;
+
+            item.onclick = function (event) {
+                loadChapter({
+                    type: "video",
+                    video: link
+                }, item, event);
+            };
+
+            container.appendChild(item);
+
+            // أول فيديو يشتغل تلقائي
+            if (index === 0) {
+                document.getElementById("chapterViewer").innerHTML = `
+                    <iframe src="${link}" class="chapter-video" frameborder="0" allowfullscreen></iframe>
+                `;
+            }
+        });
+
+    } catch (err) {
+        console.error("ERROR:", err);
+    }
+}
