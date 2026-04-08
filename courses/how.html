@@ -27,23 +27,32 @@
     </header>
 
 
-<button class="mobile-menu-btn" onclick="togglePlaylist(event)">
+
+<button class="mobile-menu-btn" onclick="togglePlaylist()">
     <i class="fas fa-bars"></i>
 </button>
-<div class="youtube-section">
-     <div class="video-playlist" id="playlist-container">
-        <h3>Course Playlist</h3>
 
-        <!-- مهم جدًا -->
-        <div class="playlist-items" id="playlistItems" data-file="../data/design.json"></div>
 
-        <span class="close-menu" onclick="togglePlaylist(event)">&times;</span>
+    
+  
+
+    
+<div class="youtube-section" >
+
+<div class="video-playlist" id="playlist-container">
+    <h3>Course Playlist </h3>
+    <div class="playlist-items">
+        <div class="item active" onclick="changeVideo('XXWjv1vD-SI')">Live broadcast from the workshop</div>
+
+
     </div>
-
+    <span class="close-menu" onclick="togglePlaylist()">&times;</span>
+</div>
     <div class="video-display">
-        <iframe id="main-video" src="" frameborder="0" allowfullscreen></iframe>
+        <iframe id="main-video" src="https://www.youtube.com/embed/XXWjv1vD-SI"frameborder="0" allowfullscreen></iframe>
     </div>
 
+   
 </div>
 
     <script src="../script.js"></script>

@@ -24,24 +24,29 @@
         <h1>Kraken Courses</h1>
         <p>Design and analysis of algorithms with <u>Abdul Rahman</u></p>
     </header>
+<button class="mobile-menu-btn" onclick="togglePlaylist()"><i class="fas fa-bars"></i></button>
 
-<button class="mobile-menu-btn" onclick="togglePlaylist(event)">
-    <i class="fas fa-bars"></i>
-</button>
 <div class="youtube-section">
-     <div class="video-playlist" id="playlist-container">
-        <h3>Course Playlist</h3>
 
-        <!-- مهم جدًا -->
-        <div class="playlist-items" id="playlistItems" data-file="../data/design.json"></div>
-
-        <span class="close-menu" onclick="togglePlaylist(event)">&times;</span>
+<div class="video-playlist" id="playlist-container">
+    <h3>Course Playlist </h3>
+    <div class="playlist-items">
+        <div class="item active" onclick="changeVideo('FPLG-LcGZlY')">introduction to algorithm</div>
+        <div class="item" onclick="changeVideo('fVIZiMvk0m0')">Analyzing algorithms(types of analysis)</div>
+        <div class="item" onclick="changeVideo('FDLqDS75cnM')">Asymptotic analysis</div>
+        <div class="item" onclick="changeVideo('0Y8VBekXDiI')">Recurrence relation and master theorem</div>
+        <div class="item" onclick="changeVideo('d0zctVXyX8Y')">Sorting algorithm: insertion sort</div>
+        <div class="item" onclick="changeVideo('hvEySIAVHYQ')">Sorting algorithm: Selection sort</div>
+        <div class="item" onclick="changeVideo('bhS1wu9hs0E')">Sorting algorithm: Heap sort</div>
     </div>
-
+<span class="close-menu" onclick="togglePlaylist()">&times;</span>
+</div>
     <div class="video-display">
-        <iframe id="main-video" src="" frameborder="0" allowfullscreen></iframe>
+        <iframe id="main-video" src="https://www.youtube.com/embed/FPLG-LcGZlY" 
+        frameborder="0" allowfullscreen></iframe>
     </div>
 
+   
 </div>
 
     <script src="../script.js"></script>

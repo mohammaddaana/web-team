@@ -183,9 +183,3 @@ async function loadTeamMembers() {
         console.error("Error loading team members:", error);
     }
 }
-
-
-    } catch (err) {
-        console.error("ERROR:", err);
-    }
-}

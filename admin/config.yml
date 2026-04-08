@@ -13,79 +13,86 @@ collections:
         name: "android"
         file: "data/android.json"
         fields:
+          - { label: "Course Title", name: "title", widget: "string", required: false }
+          - { label: "Course Description", name: "description", widget: "text", required: false }
+          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
             fields:
-              - { label: "عنوان الفيديو", name: "title", widget: "string" }
-              - { label: "رابط الفيديو", name: "link", widget: "string" }
-              - { label: "وصف الفيديو", name: "description", widget: "text", required: false }
-              - { label: "صورة الفيديو", name: "cover", widget: "image", required: false }
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
 
       - label: "Design Course"
         name: "design"
         file: "data/design.json"
         fields:
+          - { label: "Course Title", name: "title", widget: "string", required: false }
+          - { label: "Course Description", name: "description", widget: "text", required: false }
+          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
             fields:
-              - { label: "عنوان الفيديو", name: "title", widget: "string" }
-              - { label: "رابط الفيديو", name: "link", widget: "string" }
-              - { label: "وصف الفيديو", name: "description", widget: "text", required: false }
-              - { label: "صورة الفيديو", name: "cover", widget: "image", required: false }
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
 
       - label: "How Course"
         name: "how"
         file: "data/how.json"
         fields:
+          - { label: "Course Title", name: "title", widget: "string", required: false }
+          - { label: "Course Description", name: "description", widget: "text", required: false }
+          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
             fields:
-              - { label: "عنوان الفيديو", name: "title", widget: "string" }
-              - { label: "رابط الفيديو", name: "link", widget: "string" }
-              - { label: "وصف الفيديو", name: "description", widget: "text", required: false }
-              - { label: "صورة الفيديو", name: "cover", widget: "image", required: false }
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
 
       - label: "Pattern Course"
         name: "pattern"
         file: "data/pattern.json"
         fields:
+          - { label: "Course Title", name: "title", widget: "string", required: false }
+          - { label: "Course Description", name: "description", widget: "text", required: false }
+          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
             fields:
-              - { label: "عنوان الفيديو", name: "title", widget: "string" }
-              - { label: "رابط الفيديو", name: "link", widget: "string" }
-              - { label: "وصف الفيديو", name: "description", widget: "text", required: false }
-              - { label: "صورة الفيديو", name: "cover", widget: "image", required: false }
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
 
       - label: "Web Course"
         name: "web"
         file: "data/web.json"
         fields:
+          - { label: "Course Title", name: "title", widget: "string", required: false }
+          - { label: "Course Description", name: "description", widget: "text", required: false }
+          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
             fields:
-              - { label: "عنوان الفيديو", name: "title", widget: "string" }
-              - { label: "رابط الفيديو", name: "link", widget: "string" }
-              - { label: "وصف الفيديو", name: "description", widget: "text", required: false }
-              - { label: "صورة الفيديو", name: "cover", widget: "image", required: false }
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
 
       - label: "WordPress Course"
         name: "wordpress"
         file: "data/wordpress.json"
         fields:
+          - { label: "Course Title", name: "title", widget: "string", required: false }
+          - { label: "Course Description", name: "description", widget: "text", required: false }
+          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
             fields:
-              - { label: "عنوان الفيديو", name: "title", widget: "string" }
-              - { label: "رابط الفيديو", name: "link", widget: "string" }
-              - { label: "وصف الفيديو", name: "description", widget: "text", required: false }
-              - { label: "صورة الفيديو", name: "cover", widget: "image", required: false }
+              - { label: "Video Name", name: "title", widget: "string" }
+              - { label: "Video Link", name: "link", widget: "string" }
+
   - name: "team"
     label: "Team"
     files:

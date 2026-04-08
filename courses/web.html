@@ -25,22 +25,26 @@
         <h1>Kraken Courses</h1>
         <p>Web programming with <u>Abdullah Radi</u></p>
     </header>
-<button class="mobile-menu-btn" onclick="togglePlaylist(event)">
-    <i class="fas fa-bars"></i>
-</button>
+<button class="mobile-menu-btn" onclick="togglePlaylist()"><i class="fas fa-bars"></i></button>
+
 <div class="youtube-section">
-     <div class="video-playlist" id="playlist-container">
-        <h3>Course Playlist</h3>
 
-        <!-- مهم جدًا -->
-        <div class="playlist-items" id="playlistItems" data-file="../data/design.json"></div>
+<div class="video-playlist"id="playlist-container">
+    <h3>Course Playlist </h3>
+    <div class="playlist-items">
+        <div class="item active" onclick="changeVideo('DCLTvOQaCVU')">Introduction HTML</div>
+        <div class="item " onclick="changeVideo('t5cV70YXVow')">Introduction Css</div>
 
-        <span class="close-menu" onclick="togglePlaylist(event)">&times;</span>
+
     </div>
+           <span class="close-menu" onclick="togglePlaylist()">&times;</span>
 
+</div>
     <div class="video-display">
-        <iframe id="main-video" src="" frameborder="0" allowfullscreen></iframe>
+        <iframe id="main-video" src="https://www.youtube.com/embed/DCLTvOQaCVU" 
+        frameborder="0" allowfullscreen></iframe>
     </div>
+
 
 </div>
 

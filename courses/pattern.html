@@ -25,23 +25,29 @@
         <h1>Kraken Courses</h1>
         <p>Pattern programming with <u>Ahmed Al Ramli</u></p>
     </header>
-<button class="mobile-menu-btn" onclick="togglePlaylist(event)">
-    <i class="fas fa-bars"></i>
-</button>
+<button class="mobile-menu-btn" onclick="togglePlaylist()"><i class="fas fa-bars"></i></button>
+
 <div class="youtube-section">
-     <div class="video-playlist" id="playlist-container">
-        <h3>Course Playlist</h3>
 
-        <!-- مهم جدًا -->
-        <div class="playlist-items" id="playlistItems" data-file="../data/design.json"></div>
-
-        <span class="close-menu" onclick="togglePlaylist(event)">&times;</span>
+<div class="video-playlist"id="playlist-container">
+    <h3>Course Playlist </h3>
+    <div class="playlist-items">
+        <div class="item active" onclick="changeVideo('wEunmavhd-g')">Introduction</div>
+        <div class="item" onclick="changeVideo('jq2_oMPDUPY')">Singleton Pattern (Eager)</div>
+        <div class="item" onclick="changeVideo('sOKalxJ63Ks')">Singleton Pattern (Lazy)</div>
+        <div class="item" onclick="changeVideo('t7cVpFMhTxo')">Multithreaded & Double-Check</div>
+        <div class="item" onclick="changeVideo('R5NSnO8X1J8')">Factory Pattern</div>
+        <div class="item" onclick="changeVideo('NrNaxLI9T0A')">Builder Pattern</div>
+        <div class="item" onclick="changeVideo('5Fw3V9kfwqY')">Abstract Factory Pattern</div>
     </div>
-
+    <span class="close-menu" onclick="togglePlaylist()">&times;</span>
+</div>
     <div class="video-display">
-        <iframe id="main-video" src="" frameborder="0" allowfullscreen></iframe>
+        <iframe id="main-video" src="https://www.youtube.com/embed/wEunmavhd-g" 
+        frameborder="0" allowfullscreen></iframe>
     </div>
 
+   
 </div>
 
     <script src="../script.js"></script>
