@@ -1,10 +1,85 @@
 {
   "members": [
     {
-      "name": "تامر",
-      "role": "KO",
-      "department": "AI",
-      "image": "/Images/uploads/screenshot-2026-04-01-215048.png"
+      "name": "Ahmed Al-Qawasmi",
+      "role": "Founder & Kraken Lab Leader",
+      "department": "Computer science",
+      "image": "Images/Personal/Ahmed.jpg",
+      "instagram": "https://www.instagram.com/a7mad_11.m?igsh=Zm9iZ2FpbGJwa3g2",
+      "linkedin": "https://www.linkedin.com/in/ahmad-alqawasme-891596325?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      "github": "https://github.com/alqawasmiahmad4-jpg"
+    },
+    {
+      "name": "Abdullah Radi",
+      "role": "CO-Leader",
+      "department": "Software Engineering",
+      "image": "Images/Personal/AbdR.jpg",
+      "instagram": "",
+      "linkedin": "https://www.linkedin.com/in/abedallah-radi-293a6a2b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github": ""
+    },
+    {
+      "name": "Abdelrahman Hamdan",
+      "role": "Human Resources (HR) Department Leader",
+      "department": "Computer science",
+      "image": "Images/Personal/AbdHum.jpg",
+      "instagram": "https://www.instagram.com/abe.d.hamdan?igsh=MXVwZ3M5Zzc5NDZpcQ==",
+      "linkedin": "https://www.linkedin.com/in/abed-alrahman-hamdan-45b526388?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      "github": ""
+    },
+    {
+      "name": "Ahmed Al-Ramli",
+      "role": "Quality Assurance (QA) Department Leader",
+      "department": "Software Engineering",
+      "image": "Images/Personal/Ahmad2.jpg",
+      "instagram": "https://www.instagram.com/a7mad.__.05/",
+      "linkedin": "https://www.linkedin.com/in/ahmad-alrmli-6516b1343?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      "github": ""
+    },
+    {
+      "name": "mohammad dana",
+      "role": "Game Developement Department Leader",
+      "department": "Artificial intelligence",
+      "image": "Images/Personal/Mohammed.jpg",
+      "instagram": "https://www.instagram.com/mohammad.danaa/?next=%2F",
+      "linkedin": "https://www.linkedin.com/in/mohammad-daan-a-506719308/",
+      "github": "https://github.com/mohammaddaana"
+    },
+    {
+      "name": "Tamer Al-Kiswani",
+      "role": "AI Department Leader",
+      "department": "Artificial intelligence",
+      "image": "Images/Personal/Tamer.jpg",
+      "instagram": "https://www.instagram.com/tamer_keswany?igsh=MWRyMncwZHdqOXZkeA==",
+      "linkedin": "https://www.linkedin.com/in/tamer-alkaswani-60b874313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github": ""
+    },
+    {
+      "name": "Mohammad Mashhour",
+      "role": "Public Relations (PR) Department Leader",
+      "department": "Computer science",
+      "image": "Images/Personal/MohammadAbuH.jpg",
+      "instagram": "https://www.instagram.com/mohamad_abuhassan/?next=%2F",
+      "linkedin": "https://www.linkedin.com/in/mohamad-abu-hassan-a40362249?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github": ""
+    },
+    {
+      "name": "Basima Thaher",
+      "role": "Android Development Department Leader",
+      "department": "Computer science",
+      "image": "Images/Personal/Basma.jpg",
+      "instagram": "",
+      "linkedin": "https://www.linkedin.com/in/basima-alobidi-baa150376?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github": ""
+    },
+    {
+      "name": "Amani Odeh",
+      "role": "Media & Marketing Department Leader",
+      "department": "Software Engineering",
+      "image": "Images/Personal/Amani.jpg",
+      "instagram": "",
+      "linkedin": "https://www.linkedin.com/in/amani-odeh/",
+      "github": ""
     }
   ]
 }
