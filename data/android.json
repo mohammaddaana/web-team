@@ -1,3 +1,80 @@
 {
-  "videos": []
+  "videos": [
+    {
+      "title": "Introduction",
+      "link": "https://www.youtube.com/watch?v=ufNbdYlkihU"
+    },
+    {
+      "title": "TextView",
+      "link": "https://www.youtube.com/watch?v=iRzP4vcSeTE"
+    },
+    {
+      "title": "ViewButton and Toast",
+      "link": "https://www.youtube.com/watch?v=JlWDdYoAvhw"
+    },
+    {
+      "title": "Android Emulator",
+      "link": "https://www.youtube.com/watch?v=bLtlAHBAMyU"
+    },
+    {
+      "title": "Button",
+      "link": "https://www.youtube.com/watch?v=DuVJ5awMUOA"
+    },
+    {
+      "title": "strings.xml",
+      "link": "https://www.youtube.com/watch?v=daqZC21cWqw"
+    },
+    {
+      "title": "colors.xml",
+      "link": "https://www.youtube.com/watch?v=QDGogAuDzNM"
+    },
+    {
+      "title": "Button andEditText",
+      "link": "https://www.youtube.com/watch?v=U2YLjgyfwqg"
+    },
+    {
+      "title": "ImageView",
+      "link": "https://www.youtube.com/watch?v=jGwLZ772fOs"
+    },
+    {
+      "title": "Factorial",
+      "link": "https://www.youtube.com/watch?v=efR5dCSumjQ"
+    },
+    {
+      "title": "TextWatcher",
+      "link": "https://www.youtube.com/watch?v=ggWRu-KcYwc"
+    },
+    {
+      "title": "Intention and movement between activities",
+      "link": "https://www.youtube.com/watch?v=M_rV0hCmg-4"
+    },
+    {
+      "title": "Intent with data transfer (String Data)",
+      "link": "https://www.youtube.com/watch?v=CQycHXlzJf8"
+    },
+    {
+      "title": "The goal is to use numerical data and calculate the factorial",
+      "link": "https://www.youtube.com/watch?v=p3Uies9y2yY"
+    },
+    {
+      "title": "Intent to open links (Web)",
+      "link": "https://www.youtube.com/watch?v=_Rj-pMjkHjI"
+    },
+    {
+      "title": "Bundle part 1",
+      "link": "https://www.youtube.com/watch?v=EZkiKRUHIE4"
+    },
+    {
+      "title": "Bundle part 2",
+      "link": "https://www.youtube.com/watch?v=UwdrD02d5NQ"
+    },
+    {
+      "title": "Send SMS messages",
+      "link": "https://www.youtube.com/watch?v=e_bPVuShTyg"
+    },
+    {
+      "title": "Using Intent with the camera",
+      "link": "https://www.youtube.com/watch?v=twLT2gZ-JMk"
+    }
+  ]
 }

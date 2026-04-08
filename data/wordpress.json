@@ -1,3 +1,71 @@
 {
-  "videos": []
+  "chapters": [
+    {
+      "title": "Introduction to WordPress",
+      "type": "pdf",
+      "file": "../PDF/wordpress-chapter1.pdf"
+    },
+    {
+      "title": "Installing WordPress",
+      "type": "images",
+      "download": "../PDF/installing-wordpress.zip",
+      "images": [
+        {
+          "src": "../Images/wordpress/D/D1.png",
+          "title": "خطوات التثبيت",
+          "desc": ""
+        },
+        {
+          "src": "../Images/wordpress/D/0.jpg",
+          "title": "ملاحظة هامة:",
+          "desc": "تأكد أولًا من معلومات جهازك. إذا وجدت أن جهازك يدعم 64-bit operating system، فيمكنك تنزيل برنامج Bitnami WordPress Stack وإكمال الخطوات. أما إذا كان غير ذلك، فلن تتمكن من تثبيت البرنامج، وفي هذه الحالة انتقل مباشرة إلى الطريقة التقليدية."
+        },
+        {
+          "src": "../Images/wordpress/D/D.png",
+          "title": "تثبيت برنامج Local وشرح إنشاء ووردبريس محلي عليه",
+          "desc": "في هذا الجزء سنشرح طريقة تثبيت برنامج Local واستخدامه لإنشاء موقع ووردبريس محلي على جهازك."
+        },
+        {
+          "src": "../Images/wordpress/D/1.jpg",
+          "title": "الخطوة الأولى:",
+          "desc": "حمّل برنامج Local، وهو برنامج مجاني تمامًا، ثم ثبّته على حاسوبك."
+        },
+        {
+          "src": "../Images/wordpress/D/2.jpg",
+          "title": "الخطوة الثانية:",
+          "desc": "بعد تثبيت البرنامج، اضغط على الأيقونة الخضراء (+) الموجودة أسفل البرنامج."
+        },
+        {
+          "src": "../Images/wordpress/D/3.jpg",
+          "title": "الخطوة الثالثة:",
+          "desc": "اكتب اسم الموقع الذي تريد إنشاءه. في الصورة أعلاه تمت كتابة كلمة test، ثم اضغط على Continue."
+        },
+        {
+          "src": "../Images/wordpress/D/4.jpg",
+          "title": "الخطوة الرابعة:",
+          "desc": "في هذه الخطوة تختار بيئة العمل مثل نوع السيرفر، وقاعدة البيانات، وإصدار PHP. ولتسهيل الأمر، اضغط مباشرة على Continue."
+        },
+        {
+          "src": "../Images/wordpress/D/5.jpg",
+          "title": "الخطوة الخامسة:",
+          "desc": "أخيرًا، أدخل بيانات الأدمن: اسم الدخول، وكلمة المرور، والبريد المحلي المستخدم، ثم اضغط على Add Site."
+        },
+        {
+          "src": "../Images/wordpress/D/6.jpg",
+          "title": "بعد الانتهاء:",
+          "desc": "انتظر بضع ثوانٍ، وسيتم إضافة الموقع إلى القائمة عندك. لفتح لوحة تحكم ووردبريس الخاصة بالموقع test اضغط على Admin، ولعرض الموقع نفسه اضغط على Open Site."
+        }
+      ]
+    },
+    {
+      "title": "WordPress Video 1",
+      "type": "video",
+      "video": "https://youtu.be/0RS8GH1lQHU?si=1KmMEhATMkebiBvL"
+    },
+    {
+      "title": "WordPress Video 2",
+      "type": "video",
+      "video": "https://youtu.be/WYGUdBxbAuw"
+    }
+  ]
 }

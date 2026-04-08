@@ -13,9 +13,6 @@ collections:
         name: "android"
         file: "data/android.json"
         fields:
-          - { label: "Course Title", name: "title", widget: "string", required: false }
-          - { label: "Course Description", name: "description", widget: "text", required: false }
-          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
@@ -27,9 +24,6 @@ collections:
         name: "design"
         file: "data/design.json"
         fields:
-          - { label: "Course Title", name: "title", widget: "string", required: false }
-          - { label: "Course Description", name: "description", widget: "text", required: false }
-          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
@@ -41,9 +35,6 @@ collections:
         name: "how"
         file: "data/how.json"
         fields:
-          - { label: "Course Title", name: "title", widget: "string", required: false }
-          - { label: "Course Description", name: "description", widget: "text", required: false }
-          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
@@ -55,9 +46,6 @@ collections:
         name: "pattern"
         file: "data/pattern.json"
         fields:
-          - { label: "Course Title", name: "title", widget: "string", required: false }
-          - { label: "Course Description", name: "description", widget: "text", required: false }
-          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
@@ -69,9 +57,6 @@ collections:
         name: "web"
         file: "data/web.json"
         fields:
-          - { label: "Course Title", name: "title", widget: "string", required: false }
-          - { label: "Course Description", name: "description", widget: "text", required: false }
-          - { label: "Cover Image", name: "cover", widget: "image", required: false }
           - label: "Videos"
             name: "videos"
             widget: "list"
@@ -83,16 +68,26 @@ collections:
         name: "wordpress"
         file: "data/wordpress.json"
         fields:
-          - { label: "Course Title", name: "title", widget: "string", required: false }
-          - { label: "Course Description", name: "description", widget: "text", required: false }
-          - { label: "Cover Image", name: "cover", widget: "image", required: false }
-          - label: "Videos"
-            name: "videos"
+          - label: "Chapters"
+            name: "chapters"
             widget: "list"
             fields:
-              - { label: "Video Name", name: "title", widget: "string" }
-              - { label: "Video Link", name: "link", widget: "string" }
-
+              - { label: "Chapter Title", name: "title", widget: "string" }
+              - label: "Chapter Type"
+                name: "type"
+                widget: "select"
+                options: ["pdf", "images", "video", "file"]
+              - { label: "PDF/File Path", name: "file", widget: "string", required: false }
+              - { label: "Video Link", name: "video", widget: "string", required: false }
+              - { label: "Download Path", name: "download", widget: "string", required: false }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Image Title", name: "title", widget: "string", required: false }
+                  - { label: "Image Description", name: "desc", widget: "text", required: false }
   - name: "team"
     label: "Team"
     files:
@@ -104,11 +99,10 @@ collections:
             name: "members"
             widget: "list"
             fields:
-            - { label: "الاسم", name: "name", widget: "string" }
-            - { label: "المنصب", name: "role", widget: "string" }
-            - { label: "التخصص", name: "department", widget: "string" }
-            - { label: "الصورة", name: "image", widget: "image" }
-            - { label: "Instagram", name: "instagram", widget: "string", required: false } 
-            - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
-            - { label: "GitHub", name: "github", widget: "string", required: false }
-            
+              - { label: "الاسم", name: "name", widget: "string" }
+              - { label: "المنصب", name: "role", widget: "string" }
+              - { label: "التخصص", name: "department", widget: "string" }
+              - { label: "الصورة", name: "image", widget: "image" }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "GitHub", name: "github", widget: "string", required: false }

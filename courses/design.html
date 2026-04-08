@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kraken</title>
-    <link rel="icon" type="image/png" href="../Images/Personal/k.png" />
-    <link rel="stylesheet" href="../style.css" />
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kraken</title>
+  <link rel="icon" type="image/png" href="../Images/Personal/k.png" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body class="courses-page">
-    <header class="main">
-      <nav>
-        <ul>
-          <li><a href="../Index.html">Home</a></li>
-          <li><a href="../Courses.html">Courses</a></li>
-        </ul>
-      </nav>
-    </header>
-    <header class="sub-page-header">
-        <h1>Kraken Courses</h1>
-        <p>Design and analysis of algorithms with <u>Abdul Rahman</u></p>
-    </header>
-<button class="mobile-menu-btn" onclick="togglePlaylist()"><i class="fas fa-bars"></i></button>
+<body class="courses-page" data-course="design">
+  <header class="main">
+    <nav>
+      <ul>
+        <li><a href="../Index.html">Home</a></li>
+        <li><a href="../Courses.html">Courses</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="youtube-section">
+  <header class="sub-page-header">
+    <h1>Kraken Courses</h1>
+    <p>Design and analysis of algorithms with <u>Abdul Rahman</u></p>
+  </header>
 
-<div class="video-playlist" id="playlist-container">
-    <h3>Course Playlist </h3>
-    <div class="playlist-items">
-        <div class="item active" onclick="changeVideo('FPLG-LcGZlY')">introduction to algorithm</div>
-        <div class="item" onclick="changeVideo('fVIZiMvk0m0')">Analyzing algorithms(types of analysis)</div>
-        <div class="item" onclick="changeVideo('FDLqDS75cnM')">Asymptotic analysis</div>
-        <div class="item" onclick="changeVideo('0Y8VBekXDiI')">Recurrence relation and master theorem</div>
-        <div class="item" onclick="changeVideo('d0zctVXyX8Y')">Sorting algorithm: insertion sort</div>
-        <div class="item" onclick="changeVideo('hvEySIAVHYQ')">Sorting algorithm: Selection sort</div>
-        <div class="item" onclick="changeVideo('bhS1wu9hs0E')">Sorting algorithm: Heap sort</div>
+  <button class="mobile-menu-btn" onclick="togglePlaylist(event)">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="youtube-section">
+    <div class="video-playlist" id="playlist-container">
+      <h3>Course Playlist</h3>
+      <div class="playlist-items" id="playlistItems"></div>
+      <span class="close-menu" onclick="togglePlaylist(event)">&times;</span>
     </div>
-<span class="close-menu" onclick="togglePlaylist()">&times;</span>
-</div>
+
     <div class="video-display">
-        <iframe id="main-video" src="https://www.youtube.com/embed/FPLG-LcGZlY" 
-        frameborder="0" allowfullscreen></iframe>
+      <iframe
+        id="main-video"
+        src=""
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
+  </div>
 
-   
-</div>
-
-    <script src="../script.js"></script>
-
+  <script src="../script.js"></script>
 </body>
 </html>

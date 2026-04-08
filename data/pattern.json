@@ -1,3 +1,32 @@
 {
-  "videos": []
+  "videos": [
+    {
+      "title": "Introduction",
+      "link": "https://www.youtube.com/watch?v=wEunmavhd-g"
+    },
+    {
+      "title": "Singleton Pattern (Eager)",
+      "link": "https://www.youtube.com/watch?v=jq2_oMPDUPY"
+    },
+    {
+      "title": "Singleton Pattern (Lazy)",
+      "link": "https://www.youtube.com/watch?v=sOKalxJ63Ks"
+    },
+    {
+      "title": "Multithreaded & Double-Check",
+      "link": "https://www.youtube.com/watch?v=t7cVpFMhTxo"
+    },
+    {
+      "title": "Factory Pattern",
+      "link": "https://www.youtube.com/watch?v=R5NSnO8X1J8"
+    },
+    {
+      "title": "Builder Pattern",
+      "link": "https://www.youtube.com/watch?v=NrNaxLI9T0A"
+    },
+    {
+      "title": "Abstract Factory Pattern",
+      "link": "https://www.youtube.com/watch?v=5Fw3V9kfwqY"
+    }
+  ]
 }

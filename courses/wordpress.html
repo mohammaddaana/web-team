@@ -38,76 +38,8 @@
     <aside class="chapter-playlist" id="playlist-container">
       <h3>Course Playlist</h3>
 
-      <div class="playlist-items">
-        <div class="item active"
-          onclick="loadChapter({
-            type: 'pdf',
-            file: '../PDF/wordpress-chapter1.pdf'
-          }, this, event)">
-          Introduction to WordPress
-        </div>
-
-        <div class="item"
-          onclick="loadChapter({
-            type: 'video',
-            video: '../Images/wordpress/theme.mp4'
-          }, this, event)">
-          Excerpts ...
-        </div>
-
-        <div class="item"
-          onclick="loadChapter({
-            type: 'images',
-            images: [
-              {
-                src: '../Images/wordpress/D/D1.png',
-                title: 'خطوات التثبيت',
-                desc: ''
-              },
-              {
-                src: '../Images/wordpress/D/0.jpg',
-                title: 'ملاحظة هامة:',
-                desc: 'تأكد أولًا من معلومات جهازك. إذا وجدت أن جهازك يدعم 64-bit operating system، فيمكنك تنزيل برنامج Bitnami WordPress Stack وإكمال الخطوات التالية. أما إذا كان غير ذلك، فلن تتمكن من تثبيت البرنامج، وفي هذه الحالة انتقل مباشرة إلى الطريقة التقليدية.'
-              },
-              {
-                src: '../Images/wordpress/D/D.png',
-                title: 'تثبيت برنامج Local وشرح إنشاء ووردبريس محلي عليه',
-                desc: 'في هذا الجزء سنشرح طريقة تثبيت برنامج Local واستخدامه لإنشاء موقع ووردبريس محلي على جهازك.'
-              },
-              {
-                src: '../Images/wordpress/D/1.jpg',
-                title: 'الخطوة الأولى:',
-                desc: 'حمّل برنامج Local، وهو برنامج مجاني تمامًا، ثم ثبّته على حاسوبك.'
-              },
-              {
-                src: '../Images/wordpress/D/2.jpg',
-                title: 'الخطوة الثانية:',
-                desc: 'بعد تثبيت البرنامج، اضغط على الأيقونة الخضراء (+) الموجودة أسفل البرنامج.'
-              },
-              {
-                src: '../Images/wordpress/D/3.jpg',
-                title: 'الخطوة الثالثة:',
-                desc: 'اكتب اسم الموقع الذي تريد إنشاءه. في الصورة أعلاه تمت كتابة كلمة test، ثم اضغط على Continue.'
-              },
-              {
-                src: '../Images/wordpress/D/4.jpg',
-                title: 'الخطوة الرابعة:',
-                desc: 'في هذه الخطوة تختار بيئة العمل مثل نوع السيرفر، وقاعدة البيانات، وإصدار PHP. ولتسهيل الأمر، اضغط مباشرة على Continue.'
-              },
-              {
-                src: '../Images/wordpress/D/5.jpg',
-                title: 'الخطوة الخامسة:',
-                desc: 'أخيرًا، أدخل بيانات الأدمن: اسم الدخول، وكلمة المرور، والبريد المحلي المستخدم، ثم اضغط على Add Site.'
-              },
-              {
-                src: '../Images/wordpress/D/6.jpg',
-                title: 'بعد الانتهاء:',
-                desc: 'انتظر بضع ثوانٍ، وسيتم إضافة الموقع إلى القائمة عندك. لفتح لوحة تحكم ووردبريس الخاصة بالموقع test اضغط على Admin، ولعرض الموقع نفسه اضغط على Open Site.'
-              }
-            ]
-          }, this, event)">
-          Installing WordPress
-        </div>
+      <div class="playlist-items" id="playlistItems">
+        <!-- chapters from wordpress.json -->
       </div>
 
       <span class="close-menu" onclick="togglePlaylist(event)">&times;</span>
@@ -125,11 +57,9 @@
         </button>
 
         <div class="chapter-viewer" id="chapterViewer">
-          <iframe
-            id="pdfViewer"
-            src="../PDF/wordpress-chapter1.pdf"
-            title="Chapter PDF">
-          </iframe>
+          <div class="empty-message">
+            Loading chapter...
+          </div>
         </div>
       </div>
 
@@ -137,7 +67,8 @@
         <a
           id="downloadBtn"
           class="download-btn"
-          href="../PDF/wordpress-chapter1.pdf"
+          href="#"
+          style="display: none;"
           download
         >
           <i class="fas fa-download"></i>

@@ -1,70 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kraken</title>
-    <link rel="icon" type="image/png" href="../Images/Personal/k.png" />
-    <link rel="stylesheet" href="../style.css" />
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kraken</title>
+  <link rel="icon" type="image/png" href="../Images/Personal/k.png" />
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
-<body class="courses-page">
+<body class="courses-page" data-course="android">
     <header class="main">
-      <nav>
-        <ul>
-          <li><a href="../Index.html">Home</a></li>
-          <li><a href="../Courses.html">Courses</a></li>
-        </ul>
-      </nav>
-    </header>
-    <header class="sub-page-header">
-        <h1>Kraken Courses</h1>
-        <p>Android programming with <u>Basima Al Obeidi</u> & <u>Manar Al Attari</u></p>
-    </header>
+    <nav>
+      <ul>
+        <li><a href="../Index.html">Home</a></li>
+        <li><a href="../Courses.html">Courses</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <header class="sub-page-header">
+    <h1>Kraken Courses</h1>
+    <p>Android programming with <u>Basima Al Obeidi</u> & <u>Manar Al Attari</u></p>
+  </header>
 
-<button class="mobile-menu-btn" onclick="togglePlaylist()"><i class="fas fa-bars"></i></button>
-<div class="youtube-section">
+  <button class="mobile-menu-btn" onclick="togglePlaylist(event)">
+    <i class="fas fa-bars"></i>
+  </button>
 
-<div class="video-playlist" id="playlist-container">
-    <h3>Course Playlist </h3>
-    <div class="playlist-items">
-        <div class="item active" onclick="changeVideo('ufNbdYlkihU')">Introduction</div>
-        <div class="item " onclick="changeVideo('iRzP4vcSeTE')">TextView</div>
-        <div class="item" onclick="changeVideo('JlWDdYoAvhw')">ViewButton and Toast</div>
-        <div class="item" onclick="changeVideo('bLtlAHBAMyU')">Android Emulator</div>
-        <div class="item" onclick="changeVideo('DuVJ5awMUOA')">Button</div>
-        <div class="item" onclick="changeVideo('daqZC21cWqw')">strings.xml</div>
-        <div class="item" onclick="changeVideo('QDGogAuDzNM')">colors.xml</div>
-        <div class="item" onclick="changeVideo('U2YLjgyfwqg')">Button andEditText</div>
-        <div class="item" onclick="changeVideo('jGwLZ772fOs')">ImageView </div>
-        <div class="item" onclick="changeVideo('efR5dCSumjQ')">Factorial</div>
-        <div class="item" onclick="changeVideo('ggWRu-KcYwc')">TextWatcher</div>
-        <div class="item" onclick="changeVideo('M_rV0hCmg-4')">Intention and movement between activities</div>
-        <div class="item" onclick="changeVideo('CQycHXlzJf8')">Intent with data transfer (String Data)</div>
-        <div class="item" onclick="changeVideo('p3Uies9y2yY')">The goal is to use numerical data and calculate the factorial</div>
-        <div class="item" onclick="changeVideo('_Rj-pMjkHjI')">Intent to open links (Web)</div>
-        <div class="item" onclick="changeVideo('EZkiKRUHIE4')">Bundle part 1</div>
-        <div class="item" onclick="changeVideo('UwdrD02d5NQ')">Bundle part 2</div>
-        <div class="item" onclick="changeVideo('e_bPVuShTyg')">Send SMS messages</div>
-        <div class="item" onclick="changeVideo('twLT2gZ-JMk')">Using Intent with the camera</div>
+  <div class="youtube-section">
+    <div class="video-playlist" id="playlist-container">
+      <h3>Course Playlist</h3>
+
+      <div class="playlist-items" id="playlistItems">
+        <!-- الفيديوهات رح تنزل هون من JSON -->
+      </div>
+
+      <span class="close-menu" onclick="togglePlaylist(event)">&times;</span>
     </div>
-    <span class="close-menu" onclick="togglePlaylist()">&times;</span>
 
-</div>
     <div class="video-display">
-        <iframe id="main-video" src="https://www.youtube.com/embed/ufNbdYlkihU"frameborder="0" allowfullscreen></iframe>
+      <iframe
+        id="main-video"
+        src=""
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
+  </div>
 
-   
-</div>
-
-    <script src="../script.js"></script>
-
+  <script src="../script.js"></script>
 </body>
 </html>

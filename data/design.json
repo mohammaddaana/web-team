@@ -1,3 +1,32 @@
 {
-  "videos": []
+  "videos": [
+    {
+      "title": "introduction to algorithm",
+      "link": "https://www.youtube.com/watch?v=FPLG-LcGZlY"
+    },
+    {
+      "title": "Analyzing algorithms(types of analysis)",
+      "link": "https://www.youtube.com/watch?v=fVIZiMvk0m0"
+    },
+    {
+      "title": "Asymptotic analysis",
+      "link": "https://www.youtube.com/watch?v=FDLqDS75cnM"
+    },
+    {
+      "title": "Recurrence relation and master theorem",
+      "link": "https://www.youtube.com/watch?v=0Y8VBekXDiI"
+    },
+    {
+      "title": "Sorting algorithm: insertion sort",
+      "link": "https://www.youtube.com/watch?v=d0zctVXyX8Y"
+    },
+    {
+      "title": "Sorting algorithm: Selection sort",
+      "link": "https://www.youtube.com/watch?v=hvEySIAVHYQ"
+    },
+    {
+      "title": "Sorting algorithm: Heap sort",
+      "link": "https://www.youtube.com/watch?v=bhS1wu9hs0E"
+    }
+  ]
 }
