@@ -58,14 +58,18 @@
       ]
     },
     {
-      "title": "WordPress Video 1",
+      "title": "Introduction to WordPress",
       "type": "video",
       "video": "https://youtu.be/0RS8GH1lQHU?si=1KmMEhATMkebiBvL"
     },
     {
-      "title": "WordPress Video 2",
+      "title": "WordPress day one",
       "type": "video",
       "video": "https://youtu.be/WYGUdBxbAuw"
-    }
+    } ,{
+  "title": "WordPress Day two",
+  "type": "video",
+  "video": "https://youtu.be/rIERz4UTQ8g"
+}
   ]
 }
