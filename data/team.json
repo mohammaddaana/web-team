@@ -73,6 +73,14 @@
       "github": ""
     },
     {
+      "instagram": "https://www.instagram.com/omar_abuaisheh?igsh=MWoxeHJmN3cwcHBrcA== ",
+      "linkedin": "https://www.linkedin.com/in/omar-abuaisheh-1a0454323?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      "role": "Cybersecurity Department Leader",
+      "name": "Omar Abuaisheh",
+      "image": "/Images/uploads/screenshot-2026-06-22-164744.png",
+      "department": "Cybersecurity"
+    },
+    {
       "name": "Amani Odeh",
       "role": "Media & Marketing Department Leader",
       "department": "Software Engineering",
@@ -82,12 +90,13 @@
       "github": ""
     },
     {
-      "instagram": "https://www.instagram.com/omar_abuaisheh?igsh=MWoxeHJmN3cwcHBrcA== ",
-      "linkedin": "https://www.linkedin.com/in/omar-abuaisheh-1a0454323?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-      "role": "Cybersecurity Department Leader",
-      "name": "Omar Abuaisheh",
-      "image": "/Images/uploads/screenshot-2026-06-22-164744.png",
-      "department": "Cybersecurity"
+      "name": "Ahmad Khattab",
+      "linkedin": "https://www.linkedin.com/in/ahmad-khattab-892183323?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      "github": "https://github.com/ahmadKhatttab",
+      "instagram": "https://www.instagram.com/ahmad_khatttab?igsh=NzBnMHRrejNtOTFj",
+      "role": "Event organization & Web advisor",
+      "department": "Software Engineering",
+      "image": "/Images/uploads/screenshot-2026-06-22-165406.png"
     }
   ]
 }
